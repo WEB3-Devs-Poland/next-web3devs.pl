@@ -25,6 +25,10 @@ module.exports = {
     'plugin:prettier/recommended',
   ],
   rules: {
+    quotes: ['error', 'single'],
+    indent: ['error', 2],
+    semi: ['error', 'always'],
+    'max-len': ['error', { code: 120 }],
     'react/prop-types': 'off',
     'prettier/prettier': ['error', {}, { usePrettierrc: true }],
     'react/react-in-jsx-scope': 'off',

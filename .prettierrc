@@ -4,7 +4,7 @@
   "printWidth": 120,
   "singleQuote": true,
   "trailingComma": "es5",
-  "importOrder": ["pages", "public"],
+  "importOrder": ["components", "pages", "public"],
   "importOrderSeparation": true,
   "importOrderSortSpecifiers": true
 }
