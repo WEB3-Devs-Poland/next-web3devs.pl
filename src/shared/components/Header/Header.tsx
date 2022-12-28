@@ -9,7 +9,7 @@ import { Button } from '@components/Button';
 export const Header: React.FC = () => (
   <header className="w-full flex justify-around top-0 z-50 m-auto">
     <div className="w-10/12 flex flex-row justify-between">
-      <div>
+      <div className="w-36">
         <Link href={ROUTE.home}>
           <WEB3DevsPolandLogo />
         </Link>
@@ -23,7 +23,7 @@ export const Header: React.FC = () => (
         ))}
       </div>
 
-      <div className="my-auto">
+      <div className="my-auto w-36">
         <Button>Connect Wallet</Button>
       </div>
     </div>
