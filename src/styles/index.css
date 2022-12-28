@@ -1,3 +1,56 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+html {
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a :focus {
+  box-shadow: none;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: linear-gradient(20deg, rgba(148, 4, 252, 0.3) 0%, rgba(0, 0, 0, 0.15) 50%),
+    linear-gradient(200deg, rgba(146, 0, 255, 0.3) 0%, rgba(0, 0, 0, 0.15) 50%), #000000;
+}
