@@ -1,0 +1,30 @@
+/* Button - Default*/
+button.Default {
+  background-size: 300% 200%;
+  transition: all 0.4s ease-in-out;
+  background-image: linear-gradient(45deg, #9200ff 10%, #b754ff 85%);
+}
+
+button.Default:hover {
+  background-position: 100% 0;
+  transition: all 0.4s ease-in-out;
+  box-shadow: rgba(255, 255, 255, 0.2) 0px 0px 20px 0px;
+}
+
+/* Button - Link */
+a.Link:after {
+  content: '';
+  display: block;
+
+  transform: scaleX(0);
+  transform-origin: 0% 50%;
+  transition: transform 250ms ease-in-out;
+
+  border-bottom: solid 3px transparent;
+  border-image: linear-gradient(45deg, #9200ff 10%, #b754ff 85%);
+  border-image-slice: 1;
+}
+
+a.Link:hover:after {
+  transform: scaleX(1);
+}

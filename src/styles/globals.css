@@ -51,6 +51,8 @@ body {
 }
 
 body {
+  height: 100vh;
+
   background: linear-gradient(20deg, rgba(148, 4, 252, 0.3) 0%, rgba(0, 0, 0, 0.15) 50%),
     linear-gradient(200deg, rgba(146, 0, 255, 0.3) 0%, rgba(0, 0, 0, 0.15) 50%), #000000;
 }

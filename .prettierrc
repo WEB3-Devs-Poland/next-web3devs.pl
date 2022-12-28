@@ -4,7 +4,5 @@
   "printWidth": 120,
   "singleQuote": true,
   "trailingComma": "es5",
-  "importOrder": ["components", "pages", "public"],
-  "importOrderSeparation": true,
-  "importOrderSortSpecifiers": true
+  "jsxBracketSameLine": true
 }

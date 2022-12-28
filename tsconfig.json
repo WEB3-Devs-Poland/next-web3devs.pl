@@ -19,6 +19,8 @@
     "incremental": true,
     "baseUrl": "src/",
     "paths": {
+      "@images/*": ["images/*"],
+      "@config/*": ["shared/config/*"],
       "@components/*": ["shared/components/*"],
       "@styles/*": ["styles/*"]
     }
