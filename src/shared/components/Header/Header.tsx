@@ -32,31 +32,35 @@ export const Header: React.FC = () => (
 
       <div className="my-auto block lg:hidden">
         <Menu>
-          <Menu.Button>
-            <FontAwesomeIcon icon={faBars} color="white" size="2x" />
-          </Menu.Button>
-          <Transition
-            as={Fragment}
-            enter="transition ease-out duration-100"
-            enterFrom="transform opacity-0 scale-95"
-            enterTo="transform opacity-100 scale-100"
-            leave="transition ease-in duration-75"
-            leaveFrom="transform opacity-100 scale-100"
-            leaveTo="transform opacity-0 scale-95">
-            <Menu.Items className="absolute left-0 right-0 mx-auto my-12 w-10/12 rounded-lg border-2 border-brand-purple2 bg-black p-2 drop-shadow-glow">
-              {LINKS.map(({ label, route }) => (
-                <div key={label} className="w-full border-b-[1px] border-brand-purple2 p-6 text-center text-xl">
-                  <Button type="Link" href={route}>
-                    {label}
-                  </Button>
-                </div>
-              ))}
+          {({ close }) => (
+            <>
+              <Menu.Button>
+                <FontAwesomeIcon icon={faBars} color="white" size="2x" />
+              </Menu.Button>
+              <Transition
+                as={Fragment}
+                enter="transition ease-out duration-100"
+                enterFrom="transform opacity-0 scale-95"
+                enterTo="transform opacity-100 scale-100"
+                leave="transition ease-in duration-75"
+                leaveFrom="transform opacity-100 scale-100"
+                leaveTo="transform opacity-0 scale-95">
+                <Menu.Items className="absolute left-0 right-0 mx-auto my-12 w-10/12 rounded-lg border-2 border-brand-purple2 bg-black p-2 drop-shadow-glow">
+                  {LINKS.map(({ label, route }) => (
+                    <div key={label} className="w-full border-b-[1px] border-brand-purple2 p-6 text-center text-xl">
+                      <Button type="Link" href={route} onClick={() => setTimeout(() => close(), 250)}>
+                        {label}
+                      </Button>
+                    </div>
+                  ))}
 
-              <div className="w-full p-6 text-center text-xl ">
-                <Button>Connect Wallet</Button>
-              </div>
-            </Menu.Items>
-          </Transition>
+                  <div className="w-full p-6 text-center text-xl ">
+                    <Button>Connect Wallet</Button>
+                  </div>
+                </Menu.Items>
+              </Transition>
+            </>
+          )}
         </Menu>
       </div>
     </div>
