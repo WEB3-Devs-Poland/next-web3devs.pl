@@ -49,7 +49,7 @@ export const Header: React.FC = () => (
                 <Menu.Items className="absolute left-0 right-0 mx-auto my-12 w-10/12 rounded-lg border-2 border-brand-purple2 bg-black p-2 drop-shadow-glow">
                   {LINKS.map(({ label, route }) => (
                     <div key={label} className="w-full border-b-[1px] border-brand-purple2 p-6 text-center text-xl">
-                      <Button type="Link" href={route} onClick={() => setTimeout(() => close(), 250)}>
+                      <Button type="Link" href={route} onClick={close}>
                         {label}
                       </Button>
                     </div>
