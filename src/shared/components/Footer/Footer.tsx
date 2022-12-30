@@ -32,8 +32,10 @@ export const Footer: React.FunctionComponent = () => (
       <div className="flex flex-row justify-between">
         <h4 className="font-light text-grayScale-grey4">©2022 web3 Devs Poland. All rights reserved</h4>
         <div className="min-w-[175px]">
-          {MEDIA.map(({ icon, key }) => (
-            <FontAwesomeIcon key={key} icon={icon} color="white" size="xl" className="Icon mr-6 cursor-pointer" />
+          {MEDIA.map(({ icon, link }) => (
+            <a key={link} href={link} target="blank">
+              <FontAwesomeIcon icon={icon} color="white" size="xl" className="Icon mr-6 cursor-pointer" />
+            </a>
           ))}
         </div>
       </div>

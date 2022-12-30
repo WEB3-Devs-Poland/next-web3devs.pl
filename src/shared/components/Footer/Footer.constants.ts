@@ -18,15 +18,15 @@ export const LINKS = [
 
 export const MEDIA = [
   {
-    key: 'twitter',
+    link: 'https://twitter.com/web3DevsPoland',
     icon: faTwitter,
   },
   {
-    key: 'discord',
+    link: 'https://discord.com/invite/aPCQdz5cQA',
     icon: faDiscord,
   },
   {
-    key: 'medium',
+    link: 'https://medium.com/',
     icon: faMedium,
   },
 ];
