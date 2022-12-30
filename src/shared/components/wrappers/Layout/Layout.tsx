@@ -14,7 +14,7 @@ export const Layout: React.FunctionComponent<ILayout> = ({ title, children }) =>
       <Head>
         <title>{title}</title>
       </Head>
-      <div className="flex min-h-screen flex-col">
+      <div className="flex min-h-screen flex-col first:mt-20">
         <Header />
         {children}
         <Footer />

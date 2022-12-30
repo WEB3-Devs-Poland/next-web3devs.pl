@@ -5,7 +5,7 @@ import { LINKS, MEDIA } from './Footer.constants';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export const Footer: React.FunctionComponent = () => (
-  <div className="m-auto flex w-full justify-around bg-grayScale-grey">
+  <div className="m-auto flex w-full justify-around bg-black">
     <div className="mt-12 mb-28 w-10/12">
       <div className="flex flex-row justify-between">
         <div>

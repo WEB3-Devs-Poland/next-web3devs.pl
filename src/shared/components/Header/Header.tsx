@@ -21,7 +21,7 @@ export const Header: React.FC = () => {
   });
 
   return (
-    <header className="fixed top-0 z-50 m-auto flex w-full justify-around">
+    <header className="fixed top-0 z-50 m-auto flex w-full justify-around bg-black">
       <div className="flex w-10/12 flex-row justify-between">
         <div className="w-36">
           <Link href={ROUTE.home}>
