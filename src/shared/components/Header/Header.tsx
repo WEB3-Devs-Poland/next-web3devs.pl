@@ -9,14 +9,14 @@ import React, { Fragment } from 'react';
 import { Button } from '@components/Button';
 import { Menu, Transition } from '@headlessui/react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faSpinner } from '@fortawesome/free-solid-svg-icons';
 
 export const Header: React.FC = () => {
   const { address, isConnected } = useAccount();
   const { data: ensName } = useEnsName({ address });
 
   const { disconnect } = useDisconnect();
-  const { connect } = useConnect({
+  const { connect, isLoading } = useConnect({
     connector: new InjectedConnector(),
   });
 
@@ -39,7 +39,8 @@ export const Header: React.FC = () => {
 
         <div className="my-auto hidden w-36 lg:block">
           <Button onClick={isConnected ? disconnect : connect} className="w-36 truncate">
-            {isConnected ? ensName ?? address : 'Connect Wallet'}
+            {isConnected ? ensName ?? address : !isLoading ? 'Connect Wallet' : null}
+            {isLoading ? <FontAwesomeIcon icon={faSpinner} color="white" className="animate-spin" /> : null}
           </Button>
         </div>
 
