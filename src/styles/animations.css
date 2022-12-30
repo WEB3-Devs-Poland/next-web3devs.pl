@@ -1,3 +1,13 @@
+/* Icon - Hover animation*/
+svg.Icon {
+  transition: all 0.4s ease-in-out;
+}
+
+svg.Icon:hover {
+  color: #b754ff;
+  transition: all 0.4s ease-in-out;
+}
+
 /* Button - Default*/
 button.Default {
   background-size: 300% 200%;
