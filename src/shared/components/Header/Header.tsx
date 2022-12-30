@@ -21,8 +21,8 @@ export const Header: React.FC = () => {
   });
 
   return (
-    <header className="top-0 z-50 m-auto flex w-full justify-around">
-      <div className="flex w-10/12 flex-row justify-between">
+    <header className="top-0 z-50 flex w-full justify-around">
+      <div className="flex w-full flex-row justify-between">
         <div className="w-36">
           <Link href={ROUTE.home}>
             <WEB3DevsPolandLogo className="scale-75 lg:scale-100" />
@@ -60,7 +60,7 @@ export const Header: React.FC = () => {
                   leaveFrom="transform opacity-100 scale-100"
                   leaveTo="transform opacity-0 scale-95">
                   {/* eslint-disable-next-line max-len */}
-                  <Menu.Items className="absolute left-0 right-0 mx-auto my-12 w-10/12 rounded-lg border-2 border-brand-purple2 bg-black p-2 drop-shadow-glow">
+                  <Menu.Items className="absolute left-0 right-0 mx-12 my-12 rounded-lg border-2 border-brand-purple2 bg-black p-2 drop-shadow-glow">
                     {LINKS.map(({ label, route }) => (
                       <div key={label} className="w-full border-b-[1px] border-brand-purple2 p-6 text-center text-xl">
                         <Button type="Link" href={route} onClick={close}>

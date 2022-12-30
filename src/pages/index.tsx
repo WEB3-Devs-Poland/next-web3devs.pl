@@ -1,14 +1,13 @@
 import { NextPage } from 'next';
 
-import { Header } from '@components/Header';
 import { Section } from '@components/Section';
+import { Layout } from '@components/wrappers/Layout';
 
 const Home: NextPage = () => {
   return (
-    <div>
-      <Header />
-      <Section title="New Web3 Devs Poland page">Content</Section>
-    </div>
+    <Layout title="Web3 Devs Poland">
+      <Section title="Here will be our content">in the future...</Section>
+    </Layout>
   );
 };
 
