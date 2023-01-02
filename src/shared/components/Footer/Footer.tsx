@@ -3,9 +3,10 @@ import WEB3DevsPolandLogo from '@images/icons/WEB3DevsPolandLogo.svg';
 import React from 'react';
 import { LINKS, MEDIA } from './Footer.constants';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Input } from '@components/forms';
 
 export const Footer: React.FunctionComponent = () => (
-  <div className="m-auto flex w-full justify-around bg-black">
+  <footer className="m-auto flex w-full justify-around bg-black">
     <div className="mt-12 mb-28 w-10/12 ">
       <div className="flex flex-col justify-between lg:flex-row">
         <div>
@@ -13,8 +14,8 @@ export const Footer: React.FunctionComponent = () => (
           <div className="my-8">
             <h3 className="text-xl text-grayScale-grey4">Newsletter</h3>
             <div className="my-4">
-              <input placeholder="text" />
-              <Button className="ml-2 py-1 px-4">Subscribe</Button>
+              <Input name="email" label="E-mail" className="w-full lg:w-64" />
+              <Button className="ml-0 mt-2 w-full py-1 px-4 lg:ml-2 lg:w-fit">Subscribe</Button>
             </div>
           </div>
         </div>
@@ -42,5 +43,5 @@ export const Footer: React.FunctionComponent = () => (
         </div>
       </div>
     </div>
-  </div>
+  </footer>
 );

@@ -7,7 +7,7 @@ import { ConnectKitProvider, getDefaultClient } from 'connectkit';
 export const WagmiProvider: React.FunctionComponent<PropsWithChildren> = ({ children }) => {
   const client = createClient(
     getDefaultClient({
-      appName: '',
+      appName: 'next-web3devs.pl',
       alchemyId: ENV.ALCHEMY_ID,
       chains: [mainnet],
     })

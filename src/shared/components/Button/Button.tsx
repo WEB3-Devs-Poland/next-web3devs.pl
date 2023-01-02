@@ -2,20 +2,14 @@ import { Default } from './Default';
 import { Link } from './Link';
 import React from 'react';
 
-export interface ButtonProps extends React.PropsWithChildren {
+export interface IButton extends React.PropsWithChildren {
   type?: 'Default' | 'Link';
   href?: string;
   onClick?: () => void;
   className?: string;
 }
 
-export const Button: React.FunctionComponent<ButtonProps> = ({
-  children,
-  type = 'Default',
-  href,
-  onClick,
-  className,
-}) => {
+export const Button: React.FunctionComponent<IButton> = ({ children, type = 'Default', href, onClick, className }) => {
   if (type === 'Link' && href === undefined) {
     throw new Error('Link buttons require the ref prop');
   }
