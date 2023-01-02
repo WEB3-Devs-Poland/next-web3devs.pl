@@ -9,7 +9,7 @@ export const Footer: React.FunctionComponent = () => (
     <div className="mt-12 mb-28 w-10/12 ">
       <div className="flex flex-col justify-between lg:flex-row">
         <div>
-          <WEB3DevsPolandLogo className="scale-100" />
+          <WEB3DevsPolandLogo className="scale-75 lg:scale-100" />
           <div className="my-8">
             <h3 className="text-xl text-grayScale-grey4">Newsletter</h3>
             <div className="my-4">
@@ -22,7 +22,7 @@ export const Footer: React.FunctionComponent = () => (
           <h3 className="mb-4 text-xl text-grayScale-grey4">Useful Links</h3>
           <div className="flex flex-col gap-2">
             {LINKS.map(({ label, route }) => (
-              <Button type="Link" key={label} href={route} className="ml-0 text-base">
+              <Button type="Link" key={label} href={route} className="ml-0 w-fit text-base">
                 {label}
               </Button>
             ))}
