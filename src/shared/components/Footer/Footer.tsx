@@ -6,17 +6,17 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Input } from '@components/forms';
 
 export const Footer: React.FunctionComponent = () => (
-  <footer className="m-auto flex w-full justify-around bg-black">
+  <footer id="#footer" className="m-auto flex w-full justify-around bg-black">
     <div className="mt-12 mb-28 w-10/12 ">
       <div className="flex flex-col justify-between lg:flex-row">
         <div>
           <WEB3DevsPolandLogo className="scale-75 lg:scale-100" />
           <div className="my-8">
             <h3 className="text-xl text-grayScale-grey4">Newsletter</h3>
-            <div className="my-4">
+            <section id="newsletter" className="my-4">
               <Input name="email" label="E-mail" className="w-full lg:w-64" />
               <Button className="ml-0 mt-2 w-full py-1 px-4 lg:ml-2 lg:w-fit">Subscribe</Button>
-            </div>
+            </section>
           </div>
         </div>
         <div className="min-w-[175px]">
