@@ -6,10 +6,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export const Footer: React.FunctionComponent = () => (
   <div className="m-auto flex w-full justify-around bg-black">
-    <div className="mt-12 mb-28 w-10/12">
-      <div className="flex flex-row justify-between">
+    <div className="mt-12 mb-28 w-10/12 ">
+      <div className="flex flex-col justify-between lg:flex-row">
         <div>
-          <WEB3DevsPolandLogo className="scale-75 lg:scale-100" />
+          <WEB3DevsPolandLogo className="scale-100" />
           <div className="my-8">
             <h3 className="text-xl text-grayScale-grey4">Newsletter</h3>
             <div className="my-4">
@@ -29,9 +29,11 @@ export const Footer: React.FunctionComponent = () => (
           </div>
         </div>
       </div>
-      <div className="flex flex-row justify-between">
-        <h4 className="font-light text-grayScale-grey4">©2022 web3 Devs Poland. All rights reserved</h4>
-        <div className="min-w-[175px]">
+      <div className="flex flex-col-reverse justify-between lg:flex-row">
+        <h4 className="text-center font-light text-grayScale-grey4 lg:text-left">
+          ©2022 web3 Devs Poland. All rights reserved
+        </h4>
+        <div className="my-8 min-w-[175px] lg:my-0">
           {MEDIA.map(({ icon, link }) => (
             <a key={link} href={link} target="blank">
               <FontAwesomeIcon icon={icon} color="white" size="xl" className="Icon mr-6 cursor-pointer" />
