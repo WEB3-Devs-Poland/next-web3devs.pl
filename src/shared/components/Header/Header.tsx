@@ -2,24 +2,15 @@ import { LINKS } from './Header.constants';
 import { ROUTE } from '@config/routes';
 import WEB3DevsPolandLogo from '@images/icons/WEB3DevsPolandLogo.svg';
 import Link from 'next/link';
-import { useAccount, useConnect, useEnsName, useDisconnect } from 'wagmi';
-import { InjectedConnector } from 'wagmi/connectors/injected';
 import React, { Fragment } from 'react';
 
 import { Button } from '@components/Button';
 import { Menu, Transition } from '@headlessui/react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars, faSpinner } from '@fortawesome/free-solid-svg-icons';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { ConnectKitButton } from 'connectkit';
 
 export const Header: React.FC = () => {
-  const { address, isConnected } = useAccount();
-  const { data: ensName } = useEnsName({ address });
-
-  const { disconnect } = useDisconnect();
-  const { connect, isLoading } = useConnect({
-    connector: new InjectedConnector(),
-  });
-
   return (
     <header className="fixed top-0 z-50 m-auto flex w-full justify-around bg-black">
       <div className="flex w-10/12 flex-row justify-between">
@@ -38,10 +29,13 @@ export const Header: React.FC = () => {
         </div>
 
         <div className="my-auto hidden w-36 lg:block">
-          <Button onClick={isConnected ? disconnect : connect} className="w-36 truncate">
-            {isConnected ? ensName ?? address : !isLoading ? 'Connect Wallet' : null}
-            {isLoading ? <FontAwesomeIcon icon={faSpinner} color="white" className="animate-spin" /> : null}
-          </Button>
+          <ConnectKitButton.Custom>
+            {({ isConnected, show, address, ensName }) => (
+              <Button onClick={show} className="w-36 truncate">
+                {isConnected ? ensName ?? address : 'Connect Wallet'}
+              </Button>
+            )}
+          </ConnectKitButton.Custom>
         </div>
 
         <div className="my-auto block lg:hidden">
@@ -70,9 +64,13 @@ export const Header: React.FC = () => {
                     ))}
 
                     <div className="w-full p-6 text-center text-xl ">
-                      <Button onClick={isConnected ? disconnect : connect} className="w-full truncate">
-                        {isConnected ? ensName ?? address : 'Connect Wallet'}
-                      </Button>
+                      <ConnectKitButton.Custom>
+                        {({ isConnected, show, address, ensName }) => (
+                          <Button onClick={show} className="w-36 truncate">
+                            {isConnected ? ensName ?? address : 'Connect Wallet'}
+                          </Button>
+                        )}
+                      </ConnectKitButton.Custom>
                     </div>
                   </Menu.Items>
                 </Transition>

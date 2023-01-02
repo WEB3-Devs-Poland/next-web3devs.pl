@@ -1,15 +1,21 @@
-import { WagmiConfig, createClient, configureChains, mainnet } from 'wagmi';
-import { publicProvider } from 'wagmi/providers/public';
+import { WagmiConfig, createClient, mainnet } from 'wagmi';
+
 import React, { PropsWithChildren } from 'react';
+import { ENV } from '@config/env';
+import { ConnectKitProvider, getDefaultClient } from 'connectkit';
 
 export const WagmiProvider: React.FunctionComponent<PropsWithChildren> = ({ children }) => {
-  const { provider, webSocketProvider } = configureChains([mainnet], [publicProvider()]);
+  const client = createClient(
+    getDefaultClient({
+      appName: '',
+      alchemyId: ENV.ALCHEMY_ID,
+      chains: [mainnet],
+    })
+  );
 
-  const client = createClient({
-    autoConnect: true,
-    provider,
-    webSocketProvider,
-  });
-
-  return <WagmiConfig client={client}>{children}</WagmiConfig>;
+  return (
+    <WagmiConfig client={client}>
+      <ConnectKitProvider>{children}</ConnectKitProvider>
+    </WagmiConfig>
+  );
 };
