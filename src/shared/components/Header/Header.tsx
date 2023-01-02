@@ -65,7 +65,7 @@ export const Header: React.FC = () => (
                   <div className="w-full p-6 text-center text-xl ">
                     <ConnectKitButton.Custom>
                       {({ isConnected, show, address, ensName }) => (
-                        <Button onClick={show} className="w-36 truncate">
+                        <Button onClick={show} className="w-full truncate">
                           {isConnected ? ensName ?? address : 'Connect Wallet'}
                         </Button>
                       )}
