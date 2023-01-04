@@ -5,14 +5,17 @@ export interface ILink extends React.PropsWithChildren {
   href: string;
   onClick?: () => void;
   className?: string;
+  disabled?: boolean;
 }
 
-export const Link: React.FunctionComponent<ILink> = ({ children, href, onClick, className }) => (
+export const Link: React.FunctionComponent<ILink> = ({ children, href, onClick, className, disabled }) => (
   <NextLink
     href={href}
     scroll={false}
     onClick={onClick}
-    className={`Link mx-4 inline-block text-xl ${className ?? ''}`}>
+    className={`${
+      disabled ? 'pointer-events-none cursor-not-allowed text-grayScale-grey1' : 'Link'
+    } mx-4 inline-block select-none text-xl ${className ?? ''}`}>
     {children}
   </NextLink>
 );
