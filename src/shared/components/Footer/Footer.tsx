@@ -22,8 +22,8 @@ export const Footer: React.FunctionComponent = () => (
         <div className="min-w-[175px]">
           <h3 className="mb-4 text-xl text-grayScale-grey4">Useful Links</h3>
           <div className="flex flex-col gap-2">
-            {LINKS.map(({ label, route }) => (
-              <Button type="Link" key={label} href={route} className="ml-0 w-fit text-base">
+            {LINKS.map(({ label, route, disabled }) => (
+              <Button type="Link" disabled={disabled} key={label} href={route} className="ml-0 w-fit text-base">
                 {label}
               </Button>
             ))}

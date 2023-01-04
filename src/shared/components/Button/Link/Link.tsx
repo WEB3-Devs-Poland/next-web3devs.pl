@@ -12,9 +12,9 @@ export const Link: React.FunctionComponent<ILink> = ({ children, href, onClick, 
   <NextLink
     href={href}
     scroll={false}
-    onClick={onClick}
+    onClick={disabled ? undefined : onClick}
     className={`${
-      disabled ? 'pointer-events-none cursor-not-allowed text-grayScale-grey1' : 'Link'
+      disabled ? 'cursor-not-allowed text-grayScale-grey1' : 'Link'
     } mx-4 inline-block select-none text-xl ${className ?? ''}`}>
     {children}
   </NextLink>

@@ -20,8 +20,8 @@ export const Header: React.FC = () => (
       </div>
 
       <div className="my-auto hidden lg:block">
-        {LINKS.map(({ label, route }) => (
-          <Button type="Link" key={label} href={route}>
+        {LINKS.map(({ label, route, disabled }) => (
+          <Button type="Link" disabled={disabled} key={label} href={route}>
             {label}
           </Button>
         ))}
@@ -54,9 +54,9 @@ export const Header: React.FC = () => (
                 leaveTo="transform opacity-0 scale-95">
                 {/* eslint-disable-next-line max-len */}
                 <Menu.Items className="absolute left-0 right-0 mx-auto my-12 w-10/12 rounded-lg border-2 border-brand-purple2 bg-black p-2 drop-shadow-glow">
-                  {LINKS.map(({ label, route }) => (
+                  {LINKS.map(({ label, route, disabled }) => (
                     <div key={label} className="w-full border-b-[1px] border-brand-purple2 p-6 text-center text-xl">
-                      <Button type="Link" href={route} onClick={close}>
+                      <Button type="Link" disabled={disabled} href={route} onClick={close}>
                         {label}
                       </Button>
                     </div>
