@@ -2,23 +2,18 @@ import { ROUTE } from '@config/routes';
 
 export const LINKS = [
   {
-    label: 'Home',
-    route: ROUTE.home,
-    disabled: false,
-  },
-  {
     label: 'Blog',
     route: ROUTE.blog,
-    disabled: false,
+    disabled: true,
   },
   {
     label: 'Meetups',
     route: ROUTE.meetups,
-    disabled: false,
+    disabled: true,
   },
   {
     label: 'Newsletter',
     route: ROUTE.newsletter,
-    disabled: false,
+    disabled: true,
   },
 ];

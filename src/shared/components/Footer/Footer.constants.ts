@@ -1,26 +1,21 @@
 import { ROUTE } from '@config/routes';
-import { faTwitter, faDiscord, faMedium } from '@fortawesome/free-brands-svg-icons';
+import { faTwitter, faDiscord, faYoutube, faGithub } from '@fortawesome/free-brands-svg-icons';
 
 export const LINKS = [
   {
-    label: 'Home',
-    route: ROUTE.home,
-    disabled: false,
-  },
-  {
     label: 'Blog',
     route: ROUTE.blog,
-    disabled: false,
+    disabled: true,
   },
   {
     label: 'Meetups',
     route: ROUTE.meetups,
-    disabled: false,
+    disabled: true,
   },
   {
     label: 'Newsletter',
     route: ROUTE.newsletter,
-    disabled: false,
+    disabled: true,
   },
 ];
 
@@ -34,7 +29,11 @@ export const MEDIA = [
     icon: faDiscord,
   },
   {
-    link: 'https://medium.com/',
-    icon: faMedium,
+    link: 'https://www.youtube.com/channel/UCvV6USxk59dGeCQgxBp61bQ',
+    icon: faYoutube,
+  },
+  {
+    link: 'https://github.com/WEB3-Devs-Poland',
+    icon: faGithub,
   },
 ];

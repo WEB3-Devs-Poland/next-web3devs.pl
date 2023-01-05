@@ -14,7 +14,7 @@ export const Link: React.FunctionComponent<ILink> = ({ children, href, onClick, 
     scroll={false}
     onClick={disabled ? undefined : onClick}
     className={`${
-      disabled ? 'cursor-not-allowed text-grayScale-grey1' : 'Link'
+      disabled ? 'pointer-events-none text-grayScale-grey1' : 'Link'
     } mx-4 inline-block select-none text-xl ${className ?? ''}`}>
     {children}
   </NextLink>
