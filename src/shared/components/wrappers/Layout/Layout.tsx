@@ -13,6 +13,9 @@ export const Layout: React.FunctionComponent<ILayout> = ({ title, children }) =>
     <>
       <Head>
         <title>{title}</title>
+
+        <meta name="description" content="Web3 Devs Poland" />
+        <link rel="icon" href="/icons/favicon.ico" />
       </Head>
       <div className="flex min-h-screen flex-col first:mt-20">
         <Header />
