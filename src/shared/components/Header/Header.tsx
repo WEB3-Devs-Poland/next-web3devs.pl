@@ -30,7 +30,7 @@ export const Header: React.FC = () => (
       <div className="my-auto hidden w-36 lg:block">
         <ConnectKitButton.Custom>
           {({ isConnected, show, address, ensName }) => (
-            <Button disabled onClick={show} className="w-36 truncate">
+            <Button onClick={show} className="w-36 truncate">
               {isConnected ? ensName ?? address : 'Connect Wallet'}
             </Button>
           )}
@@ -65,7 +65,7 @@ export const Header: React.FC = () => (
                   <div className="w-full p-6 text-center text-xl ">
                     <ConnectKitButton.Custom>
                       {({ isConnected, show, address, ensName }) => (
-                        <Button disabled onClick={show} className="w-full truncate">
+                        <Button onClick={show} className="w-full truncate">
                           {isConnected ? ensName ?? address : 'Connect Wallet'}
                         </Button>
                       )}
