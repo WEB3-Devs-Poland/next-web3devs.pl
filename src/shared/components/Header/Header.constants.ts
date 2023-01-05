@@ -12,6 +12,11 @@ export const LINKS = [
     disabled: false,
   },
   {
+    label: 'Meetups',
+    route: ROUTE.meetups,
+    disabled: false,
+  },
+  {
     label: 'Newsletter',
     route: ROUTE.newsletter,
     disabled: false,
