@@ -4,13 +4,17 @@ import React from 'react';
 import { LINKS, MEDIA } from './Footer.constants';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { Input } from '@components/forms';
+import Link from 'next/link';
+import { ROUTE } from '@config/routes';
 
 export const Footer: React.FunctionComponent = () => (
   <footer id="#footer" className="m-auto flex w-full justify-around bg-black">
     <div className="mt-12 mb-28 w-10/12 ">
       <div className="flex flex-col justify-between lg:flex-row">
         <div>
-          <WEB3DevsPolandLogo className="scale-75 lg:scale-100" />
+          <Link href={ROUTE.home}>
+            <WEB3DevsPolandLogo className="scale-75 lg:scale-100" />
+          </Link>
           <div className="my-8">
             <h3 className="text-xl text-grayScale-grey4">Newsletter</h3>
             <section id="newsletter" className="my-4">
@@ -32,7 +36,7 @@ export const Footer: React.FunctionComponent = () => (
       </div>
       <div className="flex flex-col-reverse justify-between lg:flex-row">
         <h4 className="text-center font-light text-grayScale-grey4 lg:text-left">
-          ©2022 web3 Devs Poland. All rights reserved
+          ©2023 web3 Devs Poland. All rights reserved
         </h4>
         <div className="my-8 min-w-[175px] lg:my-0">
           {MEDIA.map(({ icon, link }) => (
