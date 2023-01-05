@@ -18,8 +18,10 @@ export const Footer: React.FunctionComponent = () => (
           <div className="my-8">
             <h3 className="text-xl text-grayScale-grey4">Newsletter</h3>
             <section id="newsletter" className="my-4">
-              <Input name="email" label="E-mail" className="w-full lg:w-64" />
-              <Button className="ml-0 mt-2 w-full py-1 px-4 lg:ml-2 lg:w-fit">Subscribe</Button>
+              <Input disabled name="email" label="E-mail" className="w-full lg:w-64" />
+              <Button disabled className="ml-0 mt-2 w-full py-1 px-4 lg:ml-2 lg:w-fit">
+                Subscribe
+              </Button>
             </section>
           </div>
         </div>
