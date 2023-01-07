@@ -54,3 +54,13 @@ body {
   background: linear-gradient(20deg, rgba(148, 4, 252, 0.3) 0%, rgba(0, 0, 0, 0.15) 50%),
     linear-gradient(200deg, rgba(146, 0, 255, 0.3) 0%, rgba(0, 0, 0, 0.15) 50%), #000000;
 }
+
+/* custom scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #9200ff;
+  border-radius: 5px;
+}

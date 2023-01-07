@@ -9,8 +9,8 @@ export const LINKS = [
   },
   {
     label: 'Meetups',
-    route: ROUTE.meetups,
-    disabled: true,
+    route: 'https://www.meetup.com/pl-PL/web3-devs-poland/',
+    disabled: false,
   },
   {
     label: 'Newsletter',
