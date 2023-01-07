@@ -30,7 +30,7 @@ export const PartnersRow: React.FunctionComponent = () => (
     responsive={responsive}
     keyBoardControl={false}
     // eslint-disable-next-line max-len
-    className="my-10 flex w-full justify-center border-y-2 border-brand-purple1 p-2 duration-500 ease-in-out hover:border-brand-purple2"
+    className="my-10 flex w-full justify-center border-y-2 border-brand-purple1 p-2 duration-300 ease-in-out hover:border-brand-purple2"
     itemClass="mx-8">
     {PARTNERS.map(({ name, website, CarouselLogo }) => (
       <a key={name} href={website} target="blank" className="flex h-full">
