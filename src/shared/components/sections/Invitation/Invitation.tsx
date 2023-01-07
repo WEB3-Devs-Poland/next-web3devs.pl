@@ -16,5 +16,7 @@ export const Invitation: React.FunctionComponent = () => (
     <a href={MEDIA[1].link} className="m-auto">
       <Button className="py-3 px-14 text-xl font-semibold lg:text-2xl">Join us</Button>
     </a>
+
+    <p className="mx-auto mt-8 text-lg">or scroll down to learn more</p>
   </Section>
 );
