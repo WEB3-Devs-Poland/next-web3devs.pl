@@ -1,5 +1,6 @@
 import { config } from '@fortawesome/fontawesome-svg-core';
 import '@fortawesome/fontawesome-svg-core/styles.css';
+import 'react-multi-carousel/lib/styles.css';
 import '@styles/animations.css';
 import '@styles/globals.css';
 import { AppProps } from 'next/app';
