@@ -9,6 +9,6 @@ export interface ISection extends PropsWithChildren {
 export const Section: React.FunctionComponent<ISection> = ({ children, className, title, id }) => (
   <section id={id} className="mx-auto w-10/12 py-12 lg:py-24">
     {title ? <h2 className="text-center text-3xl font-medium">{title}</h2> : null}
-    <div className={`my-20 ${className ?? ''}`}>{children}</div>
+    <div className={`mt-20 mb-10 ${className ?? ''}`}>{children}</div>
   </section>
 );
