@@ -10,7 +10,7 @@ export const PARTNERS = [
     name: 'ALEPH ZERO',
     Logo: AlephZero,
     CarouselLogo: AlephZeroCarousel,
-    website: '',
+    website: 'https://alephzero.org',
     description: '',
     media: [
       {
@@ -23,7 +23,7 @@ export const PARTNERS = [
     name: 'HASHUP',
     Logo: Hashup,
     CarouselLogo: Hashup,
-    website: '',
+    website: 'https://hashup.it',
     description: '',
     media: [
       {
@@ -36,7 +36,7 @@ export const PARTNERS = [
     name: 'DAFTCODE',
     Logo: DaftCodeCarousel,
     CarouselLogo: DaftCodeCarousel,
-    website: '',
+    website: 'https://daftcode.pl',
     description: '',
     media: [
       {
@@ -49,7 +49,7 @@ export const PARTNERS = [
     name: 'WENNECT',
     Logo: Wennect,
     CarouselLogo: WennectCarousel,
-    website: '',
+    website: 'https://www.wennect.com',
     description: '',
     media: [
       {
