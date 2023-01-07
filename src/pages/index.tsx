@@ -5,11 +5,13 @@ import { Layout } from '@components/wrappers/Layout';
 import { Activities } from '@components/sections/Activities';
 import { Invitation } from '@components/sections/Invitation';
 import { Partners } from '@components/sections/Partners';
+import { PartnersRow } from '@components/PartnersRow';
 
 const Home: NextPage = () => {
   return (
     <Layout title="Web3 Devs Poland">
       <Invitation />
+      <PartnersRow />
       <Activities />
       <Partners />
       <Section title="Join Us">More specifically, sometime in the future...</Section>
