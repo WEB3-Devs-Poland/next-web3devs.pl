@@ -4,7 +4,7 @@ import { PARTNERS } from './Partners.constants';
 
 export const Partners: React.FunctionComponent = () => {
   return (
-    <Section title="Partners" className="flex flex-row justify-center">
+    <Section title="Partners" className="flex flex-row flex-wrap justify-center">
       {PARTNERS.map(({ name, Logo }) => (
         <div
           key={name}
