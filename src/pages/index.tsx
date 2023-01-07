@@ -12,8 +12,8 @@ const Home: NextPage = () => {
       <Invitation />
       <Activities />
       <Partners />
-      <Section title="Content coming soon...">More specifically, sometime in the future...</Section>
-      <Section title="Content coming soon...">More specifically, sometime in the future...</Section>
+      <Section title="Join Us">More specifically, sometime in the future...</Section>
+      <Section title="Core Team">More specifically, sometime in the future...</Section>
     </Layout>
   );
 };

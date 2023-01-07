@@ -42,8 +42,8 @@ export const Footer: React.FunctionComponent = () => (
         </h4>
         <div className="my-8 min-w-[175px] lg:my-0">
           {MEDIA.map(({ icon, link }) => (
-            <a key={link} href={link} target="blank">
-              <FontAwesomeIcon icon={icon} color="white" size="xl" className="Icon mr-6 cursor-pointer" />
+            <a key={link} href={link} target="blank" className="mx-3">
+              <FontAwesomeIcon icon={icon} color="white" size="xl" className="Icon cursor-pointer" />
             </a>
           ))}
         </div>
